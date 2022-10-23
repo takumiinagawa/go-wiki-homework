@@ -54,7 +54,13 @@ func editHandler(w http.ResponseWriter, r *http.Request, title string) {
 }
 
 func saveHandler(w http.ResponseWriter, r *http.Request, title string) {
+	//2nd task bodyの文字数が一定以上である場合のエラー
 	body := r.FormValue("body")
+	if int64(len([]rune(body))) > 4 { //今回は文字数が4より大きい場合としている
+		http.Error(w, "", http.StatusBadRequest)
+		return
+	}
+
 	p := &Page{Title: title, Body: []byte(body)}
 	err := p.save()
 	if err != nil {
@@ -64,7 +70,7 @@ func saveHandler(w http.ResponseWriter, r *http.Request, title string) {
 	http.Redirect(w, r, "/view/"+title, http.StatusFound)
 }
 
-// 2nd task "/" redirect to "/view/FrontPage"
+// 1st task "/" redirect to "/view/FrontPage"
 func practiceHandler(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/view/FrontPage", http.StatusFound)
 }
@@ -99,5 +105,3 @@ func main() {
 
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
-
-//https://pkg.go.dev/regexp
