@@ -3,6 +3,11 @@
 URL=https://go.dev/doc/articles/wiki/
 
 ## task1
+cmd cd %path%
+
+go build assignment.go
+
+assignment.exe
 
 branch:master
 
