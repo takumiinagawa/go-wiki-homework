@@ -4,11 +4,11 @@ URL=https://go.dev/doc/articles/wiki/
 
 ## task1
 ### branch:master
-　　cmd cd %path%
+cmd cd %path%
 
-  go build assignment.go
+go build assignment.go
 
-　assignment.exe
+assignment.exe
 
 
 
@@ -17,7 +17,7 @@ URL=https://go.dev/doc/articles/wiki/
 ### branch:main
 
 cmd cd %PATH%
-   go test main_test.go assignment.go
+go test main_test.go assignment.go
 ## task3
 
 
