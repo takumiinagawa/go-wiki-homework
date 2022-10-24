@@ -1,6 +1,14 @@
-<h1>Editing {{.Title}}</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{.Title}}</title>
+        <meta charset="UTF-8">
+    </head>
 
-<form action="/save/{{.Title}}" method="POST">
-<div><textarea name="body" rows="20" cols="80">{{printf "%s" .Body}}</textarea></div>
-<div><input type="submit" value="Save"></div>
-</form>
+    <form action="/save/{{.Title}}" method="POST">
+        <p><h1>{{.Title}}</h1></p>
+        <div><textarea name="body" rows="20" cols="80">{{printf "%s" .Body}}</textarea></div>
+        <div><input type="submit" value="Save"></div>
+    </form>
+    
+</html>
