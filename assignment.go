@@ -99,5 +99,3 @@ func main() {
 
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
-
-//https://pkg.go.dev/regexp
