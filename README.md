@@ -17,7 +17,9 @@ assignment.exe
 ### branch:main
 
 cmd cd %PATH%
+
 go test main_test.go assignment.go
+
 ## task3
 
 
