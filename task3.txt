@@ -1,0 +1,22 @@
+1st error:
+
+# runtime/cgo
+gcc_libinit_windows.c: In function '_cgo_beginthread':
+gcc_libinit_windows.c:136:13: error: implicit declaration of function '_beginthread'; did you mean '_cgo_beginthread'? [-Werror=implicit-function-declaration]
+   thandle = _beginthread(func, 0, arg);
+             ^~~~~~~~~~~~
+             _cgo_beginthread
+cc1: all warnings being treated as errors
+FAIL    command-line-arguments [build failed]
+FAIL
+
+Sol:
+Install TDM-GCC
+https://jmeubank.github.io/tdm-gcc/
+
+
+gcc --version
+7.4.0 to 10.3.0
+
+
+2nd error:
