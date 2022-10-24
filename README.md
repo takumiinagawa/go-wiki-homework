@@ -8,8 +8,6 @@ cmd
 >go build assignment.go  
 >assignment.exe  
 
-
-
 ## task2
 
 cmd  
