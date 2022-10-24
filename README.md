@@ -12,7 +12,8 @@ branch:main
 
 cmd cd %PATH%
 
-cmd go test main_test.go assignment.go
+    go test main_test.go assignment.go
+## task3
 
 
 
