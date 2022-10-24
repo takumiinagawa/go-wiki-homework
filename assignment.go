@@ -20,13 +20,13 @@ type Page struct {
 }
 
 func (p *Page) save() error {
-	//1st task
+	//1.1 task
 	filename := p.Title + ".txt"
 	return os.WriteFile("./data/"+filename, p.Body, 0600)
 }
 
 func loadPage(title string) (*Page, error) {
-	//1st task
+	//1.1 task
 	filename := "./data/" + title + ".txt"
 
 	body, err := os.ReadFile(filename)
@@ -64,7 +64,7 @@ func saveHandler(w http.ResponseWriter, r *http.Request, title string) {
 	http.Redirect(w, r, "/view/"+title, http.StatusFound)
 }
 
-// 2nd task "/" redirect to "/view/FrontPage"
+// 1.2 task "/" redirect to "/view/FrontPage"
 func practiceHandler(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/view/FrontPage", http.StatusFound)
 }
@@ -92,6 +92,7 @@ func makeHandler(fn func(http.ResponseWriter, *http.Request, string)) http.Handl
 }
 
 func main() {
+	//1.2 task
 	http.HandleFunc("/", practiceHandler)
 	http.HandleFunc("/view/", makeHandler(viewHandler))
 	http.HandleFunc("/edit/", makeHandler(editHandler))
