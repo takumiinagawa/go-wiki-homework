@@ -25,12 +25,17 @@ cmd
 >assignment.exe  
 
 ## task2
+#### 課題内容  
+task1 のassignment.goにて以下のURLから main_testをコピーしテストを実行する  
+https://gist.github.com/ymt2/06ae6f7f9a35224eb477e1ca72fb0f52  
 #### 実行方法  
 cmd  
 >cd %PATH%  
 >go test main_test.go assignment.go  
 
 ## task3
+#### 課題内容  
+task2 のassignment.go,をmain_testにて-raceを用いて競合のテストを行う  
 #### 実行方法  
 cmd  
 >cd %PATH%  
