@@ -1,7 +1,9 @@
 # go-wiki-homework
 
-cmd
+URL=https://go.dev/doc/articles/wiki/
 
->cd %path%
+## task3
 
->go test -race main_test.go assignment.go
+cmd  
+>cd %PATH%  
+>go test -race main_test.go assignment.go  
