@@ -114,6 +114,9 @@ func TestSaveHandler(t *testing.T) {
 
 func TestSaveHandlerIsGoroutineSafe(t *testing.T) {
 	var saveCalled int
+	//task3
+	//排他的制御をするため変数宣言
+	var mu sync.Mutex
 
 	f := func(t *testing.T) {
 		t.Helper()
@@ -135,7 +138,11 @@ func TestSaveHandlerIsGoroutineSafe(t *testing.T) {
 			return
 		}
 
+		//task3
+		//グローバルなsaveCalledが複数のスレッドで同時に呼ばれないように排他的制御
+		mu.Lock()
 		saveCalled++
+		mu.Unlock()
 	}
 
 	wantCalled := 10
@@ -144,7 +151,7 @@ func TestSaveHandlerIsGoroutineSafe(t *testing.T) {
 		wg.Add(1)
 		go func() {
 			f(t)
-			wg.Done()
+			defer wg.Done()
 		}()
 	}
 	wg.Wait()
