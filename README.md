@@ -3,17 +3,18 @@
 URL=https://go.dev/doc/articles/wiki/
 
 ## task1
-cmd cd %path%
+### branch:master
+　　cmd cd %path%
 
-go build assignment.go
+  go build assignment.go
 
-assignment.exe
+　assignment.exe
 
-branch:master
+
 
 ## task2
 
-branch:main
+### branch:main
 
 cmd cd %PATH%
    go test main_test.go assignment.go
