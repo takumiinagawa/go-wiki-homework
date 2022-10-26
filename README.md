@@ -17,10 +17,10 @@ gcc 10.3.0
 Other tasks  
 Here are some simple tasks you might want to tackle on your own:  
 
-1.1 Store templates in tmpl/ and page data in data/.  
-1.2 Add a handler to make the web root redirect to /view/FrontPage.  
-1.3 Spruce up the page templates by making them valid HTML and adding some CSS rules.  
-1.4 Implement inter-page linking by converting instances of [PageName] to
+済1.1 Store templates in tmpl/ and page data in data/.  
+済1.2 Add a handler to make the web root redirect to /view/FrontPage.  
+途1.3 Spruce up the page templates by making them valid HTML and adding some CSS rules.  
+未1.4 Implement inter-page linking by converting instances of [PageName] to
 <a href="/view/PageName">PageName</a>. (hint: you could use regexp.ReplaceAllFunc to do this)  
 
 #### 実行方法  
